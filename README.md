@@ -25,8 +25,8 @@ Este es el backend de una aplicación de calendario construida con el stack MERN
     - Clonar el archivo `.env.template`, renombrarlo a `.env` y cambiar las variables de entorno acorde a tu configuración
         ```properties
         PORT=4000
-        DB_CNN=mongodb+srv://mern_user:GGKA7EU80G4eHfSd@calendardb.b1cyf.mongodb.net/mern_calendar
-        SECRET_JWT_SEED=Esto-Es-UnA-Palbr@_SecretA
+        DB_CNN=
+        SECRET_JWT_SEED=
         ```
 
 ## Uso
