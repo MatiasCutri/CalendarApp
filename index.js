@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 require('dotenv').config();
 const cors = require('cors');
@@ -21,6 +22,12 @@ app.use( express.json() );
 // Rutas
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/events', require('./routes/events'));
+
+// Cualquier ruta que no esté definida arriba, va a servir el contenido estático 
+// que tenemos (public/index.html) y react-router va a tomar el control y desplegarlo correctamente.
+app.use('*', (req, res) => {
+    res.sendFile(path.join( __dirname, 'public/index.html' ) );
+});
 
 // Escuchar peticiones
 app.listen( process.env.PORT, () => {
